@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Counter</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .counter-container {
+            background : linear-gradient(to right,#3bffb1, #5890f9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #2f00bd;
+        }
+
+        button {
+            background-color: #2575fc;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a5edb;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        span#count {
+            font-weight: bold;
+            font-size: 22px;
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Submit Counter</h1>
+        <form id="myForm">
+            <button type="submit">Submit</button>
+        </form>
+        <p>Button Clicked <span id="count">0</span> times.</p>
+    </div>
+
+    <script>
+        let count = 0;
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            count++;
+            document.getElementById('count').textContent = count;
+        });
+    </script>
+</body>
+</html>
