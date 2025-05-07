@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Tab</title>
+  <style>
+    :root {
+      --bg-color: #c5c2c2;
+      --text-color: #111;
+      --card-bg: #fff;
+      --hover-bg: #e0e0e0;
+      --btn-bg: #ddd;
+      --btn-hover: #ccc;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eee;
+      --card-bg: #1f1f1f;
+      --hover-bg: #2a2a2a;
+      --btn-bg: #2a2a2a;
+      --btn-hover: #3a3a3a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 15px 25px;
+      font-size: 16px;
+    }
+
+    header a, .icon {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 80px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      background-color: var(--card-bg);
+      border-radius: 30px;
+      padding: 10px 20px;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .search-bar input {
+      border: none;
+      flex: 1;
+      font-size: 16px;
+      background: transparent;
+      color: var(--text-color);
+      outline: none;
+    }
+
+    .apps {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .app-tile {
+      width: 120px;
+      height: 50px;
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .app-tile:hover {
+      background-color: var(--hover-bg);
+    }
+
+    .theme-toggle, .customize-btn {
+      position: fixed;
+      right: 20px;
+      background-color: var(--btn-bg);
+      color: var(--text-color);
+      border: none;
+      border-radius: 20px;
+      padding: 10px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover, .customize-btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .theme-toggle {
+      bottom: 20px;
+    }
+
+    .customize-btn {
+      bottom: 70px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <div class="icon">☰</div>
+    <div class="icon">J</div>
+  </header>
+
+  <main>
+    <div class="logo">Google</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search Google or type a URL" />
+    </div>
+
+    <div class="apps">
+      <div class="app-tile" onclick="window.open('https://youtube.com', '_blank')">YouTube</div>
+      <div class="app-tile" onclick="window.open('https://github.com', '_blank')">GitHub</div>
+    </div>
+  </main>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <button class="customize-btn" onclick="customizeProfile()">Customize Profile</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    function customizeProfile() {
+      alert('Customize Profile clicked! Add your customization logic here.');
+    }
+  </script>
+</body>
+</html>

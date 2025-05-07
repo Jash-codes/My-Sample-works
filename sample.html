@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Ticket Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background : linear-gradient(to right, #5750e1, #aca3a3);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 500px;
+      margin: 50px auto;
+      background-color: #67a2f4;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Flight Ticket Booking</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="from">From</label>
+      <select id="from" name="from" required>
+        <option value="">--Select Departure City--</option>
+        <option value="newyork">New York (JFK)</option>
+        <option value="london">London (Heathrow)</option>
+        <option value="dubai">Dubai (DXB)</option>
+        <option value="singapore">Singapore (Changi)</option>
+        <option value="sydney">Sydney (Kingsford Smith)</option>
+        <option value="paris">Paris (Charles de Gaulle)</option>
+      </select>
+
+      <label for="to">To</label>
+      <select id="to" name="to" required>
+        <option value="">--Select Destination City--</option>
+        <option value="tokyo">Tokyo (Haneda)</option>
+        <option value="toronto">Toronto (Pearson)</option>
+        <option value="berlin">Berlin (Brandenburg)</option>
+        <option value="amsterdam">Amsterdam (Schiphol)</option>
+        <option value="rome">Rome (Fiumicino)</option>
+        <option value="bangkok">Bangkok (Suvarnabhumi)</option>
+      </select>
+
+      <label for="date">Departure Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="class">Travel Class</label>
+      <select id="class" name="class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First Class</option>
+      </select>
+
+      <label for="passengers">Number of Passengers</label>
+      <input type="number" id="passengers" name="passengers" min="1" required>
+
+      <button type="submit">Book Flight</button>
+    </form>
+  </div>
+</body>
+</html>

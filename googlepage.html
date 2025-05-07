@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Tab</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/flagged/photo-1551301622-6fa51afe75a9?ixlib=rb-1.2.1&w=1000&q=80') no-repeat center center/cover;
+      color: #ffffff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 15px 25px;
+    }
+
+    header a, .icon {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      font-size: 64px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .search-bar {
+      background-color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      width: 500px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input {
+      border: none;
+      flex: 1;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .icons {
+      color: gray;
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    .apps {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 80px);
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .app-tile {
+      width: 80px;
+      height: 80px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .app-tile:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+
+    .customize{
+      position:fixed;
+      bottom: 20px;
+      width: 80px;
+      right: 0px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 16px;
+      display:flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      text-align: flex-end;
+      font-size: 14px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .customize:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <div class="icon">☰</div>
+    <div class="icon">J</div>
+  </header>
+
+  <main>
+    <div class="logo">Google</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search Google or type a URL" />
+    </div>
+
+    <div class="apps">
+      <div class="app-tile">YouTube</div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="customize",align="margin-left">Customize</div>
+    </div>
+  </footer>
+</body>
+</html>
